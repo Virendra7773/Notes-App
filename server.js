@@ -11,10 +11,10 @@ app.use(cors());
 
 // MongoDB connection
 mongoose
-.connect("mongodb+srv://virendrasinghchattarpura09:Viren_903@cluster0.rcjziiz.mongodb.net/?appName=Cluster0", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
+  .connect("mongodb+srv://virendrasinghchattarpura09:Viren_903@cluster0.rcjziiz.mongodb.net/notesDB?retryWrites=true&w=majority", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
   .then(() => console.log("✅ MongoDB Connected"))
   .catch((err) => console.log(err));
 
